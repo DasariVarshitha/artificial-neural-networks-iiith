@@ -752,7 +752,7 @@ MathJax.ElementJax.mml.Augment({
         delete this.scriptlevel;
         var LEVEL = this.Get("scriptlevel");
         this.scriptlevel = level;
-        level = LEVEL + parseInt(level);
+        level = LEVEL + parseInt(level,base);
       }
       return level;
     },
