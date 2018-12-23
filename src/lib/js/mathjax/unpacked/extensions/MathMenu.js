@@ -625,7 +625,7 @@
     var scale = prompt("Scale all mathematics (compared to surrounding text) by",SCALE+"%");
     if (scale) {
       if (scale.match(/^\s*\d+\s*%?\s*$/)) {
-        scale = parseInt(scale);
+        scale = parseInt(scale,base);
         if (scale) {
           if (scale !== SCALE) {
             if (HTMLCSS) {HTMLCSS.config.scale = scale}
