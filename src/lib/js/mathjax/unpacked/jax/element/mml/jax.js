@@ -1165,7 +1165,7 @@ MathJax.ElementJax.mml.Augment({
     Append: function () {this.data.push.apply(this.data,arguments)},
     value: function () {
       if (this.data[0].substr(0,2) === "#x") {return parseInt(this.data[0].substr(2),16)}
-      else if (this.data[0].substr(0,1) === "#") {return parseInt(this.data[0].substr(1))}
+      else if (this.data[0].substr(0,1) === "#") {return parseInt(this.data[0].substr(1),base)}
       else {return 0}  // FIXME: look up named entities from table
     },
     toString: function () {
