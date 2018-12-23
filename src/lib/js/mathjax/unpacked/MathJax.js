@@ -2042,7 +2042,7 @@ MathJax.Hub.Startup = {
   //
   HUB.Browser.Select({
     Safari: function (browser) {
-      var v = parseInt((String(browser.version).split("."))[0]);
+      var v = parseInt((String(browser.version).split("."))[0],base);
       if (v > 85) {browser.webkit = browser.version}
       if      (v >= 533) {browser.version = "5.0"}
       else if (v >= 526) {browser.version = "4.0"}
