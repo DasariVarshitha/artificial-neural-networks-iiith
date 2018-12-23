@@ -161,7 +161,7 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
       if (m > 1) {
         var H = (HD.h + HD.d)/2, x = HTMLCSS.TeX.x_height/2;
         var scale = HTMLCSS.config.styles[".MathJax .merror"]["font-size"];
-        if (scale && scale.match(/%/)) {x *= parseInt(scale)/100}
+        if (scale && scale.match(/%/)) {x *= parseInt(scale,base)/100}
         span.parentNode.style.verticalAlign = HTMLCSS.Em(HD.d+(x-H));
         HD.h = x + H; HD.d = H - x;
       }
