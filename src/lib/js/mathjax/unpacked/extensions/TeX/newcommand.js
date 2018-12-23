@@ -99,7 +99,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
           if (i !== this.i) {params[n] = this.string.substr(i,this.i-i)}
           c = this.string.charAt(++this.i);
           if (!c.match(/^[1-9]$/)) {TEX.Error("Illegal use of # in template for "+cs)}
-          if (parseInt(c) != ++n) {TEX.Error("Parameters for "+cs+" must be numbered sequentially")}
+          if (parseInt(c,base) != ++n) {TEX.Error("Parameters for "+cs+" must be numbered sequentially")}
           i = this.i+1;
         } else if (c === '{') {
           if (i !== this.i) {params[n] = this.string.substr(i,this.i-i)}
