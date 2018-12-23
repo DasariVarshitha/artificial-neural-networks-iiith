@@ -88,7 +88,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
           {HD = HD.split(/,/); font = this.GetBrackets(name)} else {font = HD; HD = null}
       }
       var n = this.trimSpaces(this.GetArgument(name)),
-          N = parseInt(n.match(/^x/) ? "0"+n : n);
+          N = parseInt(n.match(/^x/) ? "0"+n : n,base);
       UNICODE[N] = [800,200,500,0,500,{isUnknown:true, isUnicode:true, font:FONTS}];
       if (HD) {
         UNICODE[N][0] = Math.floor(HD[0]*1000);
